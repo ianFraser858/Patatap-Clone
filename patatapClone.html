@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Patatap Clone</title>
+	<script type="text/javascript" src="assets/js/lib/paper-full.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/css/patatapStyles.css">
+	<script type="text/paperscript" canvas="myCanvas">
+		function onKeyDown(event) {
+			var maxPoint = new Point(view.size.width, view.size.height);
+			var randPoint = Point.random();
+			var point = maxPoint * randPoint;
+
+			var myCircle = new Path.Circle(point, 10);
+			myCircle.fillColor = 'red';
+		}
+
+	</script>
+</head>
+<body>
+	<canvas id="myCanvas" resize></canvas>
+
+</body>
+</html>
